@@ -1,0 +1,9 @@
+//activator console
+//:load startapp.txt (or whatever this file is called)
+
+import play.api.{ DefaultApplication, Mode, Play }
+val applicationPath = new java.io.File(".")
+val classLoader = this.getClass.getClassLoader
+val sources = None
+val applicationMode = Mode.Dev
+Play.start(new DefaultApplication(applicationPath, classLoader, sources, applicationMode))

@@ -1,0 +1,13 @@
+@(message: String)
+
+@main("yeah boiie!") {
+	<nav class="navbar navbar-default navbar-static-top" ng-controller="StatusHeaderController">
+		<div class="container">
+			<h1>@message</h1>
+			<ul class="pager" ng-hide="isHome" class="ng-hide">
+			    <li class="previous"><a href="/ui/status/list"><span aria-hidden="true">&larr;</span> List</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div ng-view class="view-animate"></div>
+}

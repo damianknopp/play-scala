@@ -1,0 +1,8 @@
+<div class="user-status-list container">
+	<span class="list-group">
+		<a href="/ui/status/{{el.login}}" class="list-group-item" ng-repeat="el in statusAll">
+			{{el.login}}
+			<span class="badge">{{el.checkedin}}</span>
+		</a>
+	</span>
+</div>
