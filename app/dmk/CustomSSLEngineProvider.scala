@@ -1,11 +1,9 @@
 package dmk
 
-import javax.net.ssl._
+import javax.net.ssl.SSLContext
+import javax.net.ssl.SSLEngine
 import play.core.ApplicationProvider
-import play.server.api._
-import java.security.Provider
-import java.security.Security
-import org.bouncycastle.jce.provider.BouncyCastleProvider
+import play.server.api.SSLEngineProvider
 
 /**
  * Turn on client certificate authenticate to require
@@ -18,9 +16,6 @@ class CustomSSLEngineProvider(appProvider: ApplicationProvider) extends SSLEngin
     System.out.println(appProvider)
     System.out.println("overriding SSLContext and setting client auth = " + clientAuth)
 
-    val provider: Provider = new BouncyCastleProvider()
-    Security.addProvider(provider)
-//    val sslEngine = SSLContext.getInstance(provider.getName()).createSSLEngine
     val sslEngine = SSLContext.getDefault.createSSLEngine
     sslEngine.setNeedClientAuth(clientAuth)
     sslEngine

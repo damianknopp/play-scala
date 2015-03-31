@@ -24,6 +24,5 @@ libraryDependencies ++= Seq(
  "org.webjars" % "underscorejs" % "1.7.0-1",
  "org.webjars" % "angularjs" % "1.3.14",
  "org.jasypt" % "jasypt" % "1.9.2",
- "org.jsoup" % "jsoup" % "1.8.1",
- "org.bouncycastle" % "bcprov-jdk15on" % "1.52"
+ "org.jsoup" % "jsoup" % "1.8.1"
 )
